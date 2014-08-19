@@ -1,5 +1,5 @@
-<script type="text/javascript">
-    <?php
+<!--<script type="text/javascript">-->
+    var data = <?php
                 $data1 = array();
                 
                 $multitab = array(
@@ -53,8 +53,7 @@
                 ),
 
                 );
-                $acum = 0;
-
+                
                 foreach ($multitab as $key => $value) {
                     foreach ($value as $key2 => $value2) {
                         foreach ($value2 as $key3 => $value3) {
@@ -76,24 +75,14 @@
                     'visits' => array_values($resulViolento) 
                 );
                 
+                echo '<pre>';
+                var_dump($resulViolento);
+                echo '</pre>';
                 
-                /** ESTE ES EL VIOEJO DE LA VERFDULERIA
-                $data = array();
-
-                //Bar
-                $data['bar'] = array(
-                    'categories' => array('Manzana', 'Bananas', 'Naranjas'),
-                    'series' => array(
-                        array('name' => 'Lorra', 'data' => array(10, 50, 21)),
-                        array('name' => 'Cosito', 'data' => array(20, 32, 15))
-                    )
-                );
-               
-                 */
+             
+                
                 
                 //echo json_encode($data1);
-                
-                
                 ?>
-    var data = <?php echo json_encode($data1);  ?>
-</script>
+<!--</script>-->
+

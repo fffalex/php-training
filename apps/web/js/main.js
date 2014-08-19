@@ -15,30 +15,31 @@ $(function () {
             }
         },
         series: [{
-            name: data.bar.series[0].name,
-            data: data.bar.series[0].data
+            name: 'hola',
+            data: 'chau'
         }, {
-            name: data.bar.series[1].name,
-            data: data.bar.series[1].data
+            name: 'hola de nuevo',
+            data: 'chau again'
         }]
     });
-    
+        
     $('#stat2').highcharts({
         title: {
-            text: 'Promedio de Temperatura Mensual',
+            text: 'Cantidad de visitas papa',
             x: -20 //center
         },
         subtitle: {
-            text: 'Source: WorldClimate.com',
+            text: 'Source: Tuvieja.com',
             x: -20
         },
         xAxis: {
-            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-                'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+            categories: data.bar.date
+            //categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+            //    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
         },
         yAxis: {
             title: {
-                text: 'Temperature (°C)'
+                text: 'Visitas'
             },
             plotLines: [{
                 value: 0,
@@ -47,7 +48,7 @@ $(function () {
             }]
         },
         tooltip: {
-            valueSuffix: '°C'
+            valueSuffix: ''
         },
         legend: {
             layout: 'vertical',
@@ -56,8 +57,8 @@ $(function () {
             borderWidth: 0
         },
         series: [{
-            name: 'Tokyo',
-            data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+            name: 'Cantidad',
+            data: data.bar.visits
         }]
     });
 });
