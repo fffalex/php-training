@@ -6,18 +6,25 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Tu mami</title>
+        <title>Show Fact</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div>Tu vieja
-        
-            
+        <form  method='GET' action="show.php">
+        Ingrese el valor a calcular Factorial: <input type="text" name="value" >
+        <input type="submit">
+        </form>
+               
+        El factorial es:             
         <?php
-            $f = 5;
-            echo fact($f)
+            include ('FactFunction.php');
+            if ( isset($_GET['value'])){
+                $value = $_GET['value'];
+                echo fact($value);
+            }
+            
         ?>
-        </div>
+       
     </body>
 </html>
