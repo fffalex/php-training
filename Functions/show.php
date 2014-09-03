@@ -18,6 +18,7 @@ and open the template in the editor.
                
         El factorial es:             
         <?php
+            //para utilizar functions de FacFunction.php
             include ('FactFunction.php');
             if ( isset($_GET['value'])){
                 $value = $_GET['value'];
