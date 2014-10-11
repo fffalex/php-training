@@ -56,3 +56,10 @@ function addUser($name, $pass)
     $pass = md5($pass);
     $result = mysqli_query($link, 'INSERT INTO users (name, password) VALUES ("' . $name . '", "' . $pass . '")');
 }
+
+function blockUser($id)
+{
+    $link = connect();
+    $result = mysqli_query($link, 'UPDATE users SET blocked = TRUE WHERE user_id =' . $id);
+    
+}
