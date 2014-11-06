@@ -98,9 +98,10 @@ $canvas = new Canvas ();
 //Gustavo Gimenez  ® © aproved
 $figureList = [];
 $figureList[] = new Circle(200,200); 
-$figureList[] = new Recangle(500,500);
+$figureList[] = new Recangle(100,500);
 $figureList[] = new Recangle(125,400);
-$figureList[] = new Circle(300,550); 
+$figureList[] = new Circle(250,550); 
+
 
 foreach ($figureList as $figure) {
     $figure->draw($canvas);
