@@ -47,7 +47,7 @@ class TaskHandler
     {
         if ($task->status == 'Assigned')
         {
-            $this->assignedList = $task;
+            $this->assignedList[] = $task;
             $index = array_search($task, $this->unassignedList);
             unset ($this->unassignedList[$index]);    
         }
@@ -59,7 +59,7 @@ class TaskHandler
     function moveToAchieveTask (Task $task)
     {
         if ($task->status == 'Released')
-            $this->achieveList = $task;
+            $this->achieveList[] = $task;
             
             $index = array_search($task, $this->assignedList);
             unset ($this->assignedList[$index]);

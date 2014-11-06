@@ -1,4 +1,5 @@
 <?php
+namespace Tablet;
 
 class App
 {

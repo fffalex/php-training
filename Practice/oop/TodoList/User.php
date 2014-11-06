@@ -23,7 +23,7 @@ class User
         if (isset($taskHandler->unassignedList[$task]))
             {
                 //Add task to User's List
-                $this->userTasksList = $task;
+                $this->userTasksList[] = $task;
                 $task->status = 'Assigned';
                 
                 //Report to TaskHandler that the task is assigned 
