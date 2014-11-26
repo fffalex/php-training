@@ -1,6 +1,8 @@
 <?php
 require_once "bootstrap.php";
 
+$insertedCounter = 0;
+
 $provinceStr = $argv[1];
 //Array that would contain cities names
 $citiesOfNewProvince = [];
@@ -22,8 +24,9 @@ if (empty($province))
 {
     $province = new Province();
     $province->setName($provinceStr);
+    echo "\n ^^ The Province ".$provinceStr." was created \n";
 }else{
-    echo "\n The Province ".$provinceStr." already exists on DB \n";
+    echo "\n !! The Province ".$provinceStr." already exists on DB \n";
 }
 
 //Check if some cities already exist on DB
@@ -38,8 +41,12 @@ foreach ($citiesOfNewProvince as $cityName) {
         {
             $city = new City();
             $city->setName($cityName);
+            echo "\n ^^ The City ".$cityName." was created \n";
+            
+            $insertedCounter += 1;
+            
         }  else {
-            echo "\n The City ".$cityName." already exists on DB \n";
+            echo "\n !! The City ".$cityName." already exists on DB \n";
         }
     //add City to the current Province & and reference this province on the city    
     $province->addCity($city);
@@ -56,4 +63,7 @@ $entityManager->persist($province);
 
 $entityManager->flush();
 
-echo "\n Your new Province and Cities should be created .....or not\n";
+echo "\n ****** FINISHED! Your new Province and Cities should be created\n";
+echo "\n *** Province ".$province->getName()." has ID: ".$province->id. "\n";
+echo "\n *** Number of cities inserted on DB: ".$insertedCounter."\n";
+
