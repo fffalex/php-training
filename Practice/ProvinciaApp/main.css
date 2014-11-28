@@ -30,7 +30,7 @@ body{
   }
 
 .button{
-     box-shadow:3px 3px 1px #434343;
+    box-shadow:3px 3px 1px #434343;
     border: 1px solid #c6c6c6;
     line-height: 23px;
     padding: 5px 18px;
@@ -52,7 +52,7 @@ body{
 }
 
 .button:hover{
-transform: scale(1.25);
+    transform: scale(1.25);
 }
 
 .search-container{
@@ -109,6 +109,26 @@ transform: scale(1.25);
     -o-transition:All 1s ease;
 }
 
+.found{
+    font-family: "Verdana", Sans-serif, serif;
+    font-size: 17px;
+    font-weight: normal;
+    color: white;
+    background-color: #77777A;
+    margin: 5%;
+    text-align:center;
+    
+    
+    box-shadow:3px 3px 1px #434343;
+    
+}
+
+//Solo para discrimar los <li> que son clickeables
+.province{  
+}
+.city{  
+}
+
 .li-effect:hover{
 transform: rotate(0deg) scale(1.25) skew(0deg) translate(5px);
 -webkit-transform: rotate(0deg) scale(1.25) skew(1deg) translate(5px);
@@ -139,3 +159,17 @@ li{
     list-style: none;
     padding: 0;
 }
+
+#panda-helper{
+    width: 90px;
+    height: 90px;
+    background-image:  url("img/panda1.png");
+    
+}
+
+#panda-helper:hover{
+    
+}
+
+
+

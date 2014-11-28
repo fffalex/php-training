@@ -3,6 +3,7 @@
   
 <head>
   <link rel="stylesheet" href="main.css" media="screen" type="text/css" />
+   <link rel="stylesheet" href="animate.css" media="screen" type="text/css" />
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
@@ -17,10 +18,12 @@
 
 
 <div class="border-container">
+   
     <div class="column-left">
         <ul id="li-left">
            
         </ul>
+        
     </div>
         
         
@@ -28,7 +31,9 @@
         <ul id="li-right">
             
         </ul>
+      
     </div>
+    <div id="panda-helper"></div>   
 </div>    
     <script type="text/javascript" src="js/main.js"></script>
 </body>

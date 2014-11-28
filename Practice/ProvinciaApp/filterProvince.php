@@ -8,6 +8,9 @@ if(isset($_GET['inputText'])){
     $query->setParameter('startWith', $startWith.'%');
     $result = $query->getResult();
     
+//    if (empty($result)){
+//        $result = 'No provinces found';
+//    } 
     header('content-type: application/json');
     
     echo json_encode($result);
